@@ -15,7 +15,7 @@ public class Heap_Sort_Do_Livro {
     
     //94-72-51-38
     
-    static int Quantidade = 4;//QUANTIDADE DE NÚMEROS QUE SERÃO ORDENADOS*************
+    static int Quantidade = 4;//QUANTIDADE DE NÚMEROS QUE SERÃO ORDENADOS************* SE MAIOR QUE 4 DEVE SE ALTERAR A PARTE DE MOSTRAR OS NUMEROS
     static int X[] = new int[Quantidade+1];
     static String X_String[] = new String[Quantidade+1];
     
@@ -32,8 +32,8 @@ public class Heap_Sort_Do_Livro {
             X_String[i] = ""+X[i];
         }
         
-        JOptionPane.showMessageDialog(null,"Números: "+X_String[0]+" "+X_String[1]+" "+X_String[2]+" "+X_String[3]+" "+X_String[4]
-                                           +"\nPosição:   0  1   2    3   4");
+        JOptionPane.showMessageDialog(null,"Números: "+" "+"  "+X_String[1]+" "+X_String[2]+" "+X_String[3]+" "+X_String[4]
+                                           +"\nPosição:   0  1   2    3   4","Números a serem ordenados",JOptionPane.INFORMATION_MESSAGE);
         
         //"\nVetor:        0 1 2 3 4"
         //"\nPosição:   0  1   2    3   4" OK COM 2 NUMEROS CADA
@@ -46,9 +46,13 @@ public class Heap_Sort_Do_Livro {
         //ordenando de forma crescente
         ordena(qtde);
         //mostrando ovetor ordenado
-        for(i = 1; i <= Quantidade; i++){//INICIO FOR
-            JOptionPane.showMessageDialog(null,i+"º número: "+X[i]);
-        }//FIM FOR
+        for(i = 0; i < (Quantidade+1); i++){
+            X_String[i] = ""+X[i];
+        }
+        
+        JOptionPane.showMessageDialog(null,"Números: "+"  "+" "+X_String[1]+" "+X_String[2]+" "+X_String[3]+" "+X_String[4]
+                                           +"\nPosição:   0  1   2    3   4","Números Ordenados",JOptionPane.INFORMATION_MESSAGE);
+        
     }//FIM DO MAIN
     
     public static void transforma_heap(int qtde){//INICIO TRANSFORMA_HEAP
