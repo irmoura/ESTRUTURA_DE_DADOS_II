@@ -15,8 +15,9 @@ public class Heap_Sort_Do_Livro {
     
     //94-72-51-38
     
-    static int Quantidade = 3;//QUANTIDADE DE NÚMEROS QUE SERÃO ORDENADOS*************
+    static int Quantidade = 4;//QUANTIDADE DE NÚMEROS QUE SERÃO ORDENADOS*************
     static int X[] = new int[Quantidade+1];
+    static String X_String[] = new String[Quantidade+1];
     
     public static void main(String args[]){//INICIO DO MAIN
         int i,qtde;
@@ -25,7 +26,19 @@ public class Heap_Sort_Do_Livro {
             
             X[i] = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o "+i+"º número: ","Heap Sort",JOptionPane.QUESTION_MESSAGE));
             
-        }//FIM FOR QUE CARREGA OS NÚMEROS NO VETOR X
+        }
+        
+        for(i = 0; i < (Quantidade+1); i++){
+            X_String[i] = ""+X[i];
+        }
+        
+        JOptionPane.showMessageDialog(null,"Números: "+X_String[0]+" "+X_String[1]+" "+X_String[2]+" "+X_String[3]+" "+X_String[4]
+                                           +"\nPosição:   0  1   2    3   4");
+        
+        //"\nVetor:        0 1 2 3 4"
+        //"\nPosição:   0  1   2    3   4" OK COM 2 NUMEROS CADA
+        
+        //FIM FOR QUE CARREGA OS NÚMEROS NO VETOR X
         //transforma o vetor digitado em um heap
         //cada nó pai é maior que seus filhos
         qtde = Quantidade;
