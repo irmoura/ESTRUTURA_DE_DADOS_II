@@ -15,7 +15,8 @@ public class Heap_Sort_Do_Livro {
     
     //94-72-51-38
     
-    static int Quantidade = 4;//QUANTIDADE DE NÚMEROS QUE SERÃO ORDENADOS************* SE MAIOR QUE 4 DEVE SE ALTERAR A PARTE DE MOSTRAR OS NUMEROS
+    static int Quantidade = 4;//QUANTIDADE DE NÚMEROS QUE SERÃO ORDENADOS************* 
+                              //SE MAIOR QUE 4 DEVE SE ALTERAR A PARTE DE MOSTRAR OS NUMEROS
     static int X[] = new int[Quantidade+1];
     static String X_String[] = new String[Quantidade+1];
     
@@ -91,7 +92,7 @@ public class Heap_Sort_Do_Livro {
     }//FIM HEAP_FICA
     
     public static void ordena(int qtde){
-        int i, aux, ultima_posi;
+        int i, aux = 0, ultima_posi = 0;
         for(i = qtde; i >=2; i--){
             aux = X[1];
             X[1] = X[i];
